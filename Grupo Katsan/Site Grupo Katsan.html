@@ -1,0 +1,1515 @@
+<!DOCT<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Grupo Katsan — manutenção e conserto de caminhões. Conheça nossos serviços e entre em contato." name="description"/>
+  <meta content="#142435" name="theme-color"/>
+  <title>
+   Grupo Katsan | Manutenção e conserto de caminhões
+  </title>
+  <style>
+   :root {
+    --navy:#FFFFFF;
+    --navy2:#084C61;
+    --orange:#008000;
+    --cream:#F5F5F5;
+    --ink:#18222c;
+    --muted:#66717b;
+    --white:#fff;
+    --line:#e5e7e9;
+    --radius:18px;
+    --shadow:0 14px 40px #14243517
+}
+* {
+    box-sizing:border-box
+}
+html {
+    scroll-behavior:smooth;
+    scroll-padding-top:90px
+}
+body {
+    margin:0;
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+    color:var(--ink);
+    line-height:1.6
+}
+a {
+    color:inherit;
+    text-decoration:none
+}
+button,input,textarea {
+    font:inherit
+}
+.wrap {
+    width:min(1160px,calc(100% - 40px));
+    margin:auto
+}
+.topbar {
+    background:var(--navy);
+    color:#228B22;
+    font-size:.82rem;
+    padding:8px 0
+}
+.topbar .wrap {
+    display:flex;
+    justify-content:space-between;
+    gap:12px
+}
+.header {
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:#8C9EB1;
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #e9e9e4
+}
+.nav {
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px
+}
+.brand {
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-weight:900;
+    letter-spacing:.04em;
+    color:var(--navy);
+    font-size:1.12rem
+}
+.brand-mark {
+    height:42px;
+    width:42px;
+    border-radius:12px;
+    background:var(--orange);
+    color:white;
+    display:grid;
+    place-items:center;
+    font-weight:950;
+    font-size:1.25rem
+}
+.brand small {
+    display:block;
+    font-size:.6rem;
+    letter-spacing:.18em;
+    color:var(--muted);
+    font-weight:700
+}
+.links {
+    display:flex;
+    align-items:center;
+    gap:24px;
+    font-size:.9rem;
+    font-weight:650
+}
+.links a:hover {
+    color:var(--orange)
+}
+.btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    border:0;
+    border-radius:11px;
+    padding:13px 19px;
+    background:var(--orange);
+    color:white;
+    font-weight:800;
+    cursor:pointer;
+    transition:.2s;
+    box-shadow:0 7px 18px #ef762833
+}
+.btn:hover {
+    transform:translateY(-2px);
+    background:#d96116
+}
+.btn-outline {
+    background:transparent;
+    color:var(--navy);
+    border:1px solid #ffffff99;
+    box-shadow:none
+}
+.btn-dark {
+    background:var(--navy);
+    box-shadow:none
+}
+.menu-toggle {
+    display:none;
+    background:none;
+    border:0;
+    font-size:1.5rem;
+    color:var(--navy)
+}
+.hero {
+    background:var(--navy);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    min-height:570px;
+    display:flex;
+    align-items:center
+}
+.hero:before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,#101f2deF 4%,#132639d9 45%,#13263926 100%),url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1900&q=85') center 58%/cover no-repeat
+}
+.hero:after {
+    content:"";
+    position:absolute;
+    right:-130px;
+    bottom:-270px;
+    width:600px;
+    height:600px;
+    border:1px solid #ffffff27;
+    border-radius:50%;
+    box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06
+}
+.hero-content {
+    position:relative;
+    z-index:1;
+    max-width:670px;
+    padding:85px 0
+}
+.eyebrow {
+    color:var(--orange);
+    text-transform:uppercase;
+    font-size:.77rem;
+    font-weight:900;
+    letter-spacing:.18em
+}
+.hero h1 {
+    font-size:clamp(2.7rem,6vw,5rem);
+    line-height:1.02;
+    letter-spacing:-.055em;
+    margin:16px 0 20px
+}
+.hero p {
+    max-width:570px;
+    color:#d5dde4;
+    font-size:1.08rem
+}
+.actions {
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:28px
+}
+.hero-note {
+    margin-top:54px;
+    font-size:.82rem;
+    color:#c3ccd4;
+    display:flex;
+    gap:12px;
+    align-items:center
+}
+.hero-note:before {
+    content:"";
+    width:34px;
+    height:2px;
+    background:var(--orange)
+}
+section {
+    padding:88px 0
+}
+.section-head {
+    max-width:680px;
+    margin-bottom:36px
+}
+.section-head h2 {
+    font-size:clamp(2rem,4vw,3.2rem);
+    line-height:1.12;
+    letter-spacing:-.04em;
+    color:var(--navy);
+    margin:10px 0 13px
+}
+.section-head p {
+    color:var(--muted);
+    margin:0
+}
+.features {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px
+}
+.feature {
+    padding:23px 20px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius)
+}
+.icon {
+    width:44px;
+    height:44px;
+    background:#101d29;
+    color:var(--orange);
+    border-radius:13px;
+    display:grid;
+    place-items:center;
+    font-size:1.3rem;
+    font-weight:900
+}
+.feature h3 {
+    font-size:1rem;
+    color:var(--navy);
+    margin:14px 0 5px
+}
+.feature p,.card p {
+    font-size:.9rem;
+    color:var(--muted);
+    margin:0
+}
+.bg {
+    background:var(--cream)
+}
+.split {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center
+}
+.photo {
+    min-height:420px;
+    border-radius:24px;
+    background:linear-gradient(0deg,#14243540,#14243505),url('https://images.unsplash.com/photo-1586191582151-f73872dfd183?auto=format&fit=crop&w=1000&q=80') center/cover;
+    position:relative;
+    overflow:hidden
+}
+.photo-label {
+    display: none;
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    background:#fff;
+    color:var(--navy);
+    border-radius:10px;
+    padding:11px 14px;
+    font-weight:750;
+    font-size:.83rem
+    
+}
+.editable {
+    color:#515e68
+}
+.placeholder {
+    color:#228B22;
+    border-bottom:none;
+    padding:0 3px
+}
+.mission {
+    border-left:3px solid var(--orange);
+    padding:2px 0 2px 17px;
+    margin-top:24px
+}
+.mission strong {
+    color:var(--navy)
+}
+.services {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px
+}
+.card {
+    padding:24px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:#fff;
+    min-height:195px;
+    transition:.2s
+}
+.card:hover {
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+    border-color:#f4bd99
+}
+.card h3 {
+    color:var(--navy);
+    margin:16px 0 7px;
+    font-size:1.08rem
+}
+.card .tag {
+    font-size:.72rem;
+    font-weight:850;
+    color:#084C61;
+    text-transform:uppercase;
+    letter-spacing:.1em
+}
+.difference {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px
+}
+.diff {
+    display:flex;
+    gap:15px;
+    background:#fff;
+    border:1px solid var(--line);
+    padding:21px;
+    border-radius:15px
+}
+.diff .icon {
+    flex:none
+}
+.diff h3 {
+    font-size:1rem;
+    margin:0 0 5px;
+    color:var(--navy)
+}
+.diff p {
+    color:var(--muted);
+    font-size:.88rem;
+    margin:0
+}
+.gallery {
+    display:grid;
+    grid-template-columns:1.2fr .8fr .8fr;
+    gap:14px
+}
+.gallery figure {
+    margin:0;
+    position:relative;
+    min-height:235px;
+    border-radius:18px;
+    overflow:hidden;
+    background:#d9e0e4
+}
+.gallery figure:first-child {
+    grid-row:span 2;
+    min-height:484px
+}
+.gallery img {
+    width:100%;
+    height:100%;
+    min-height:235px;
+    position:absolute;
+    object-fit:cover;
+    filter:saturate(.8)
+}
+.gallery figcaption {
+    position:absolute;
+    inset:auto 0 0;
+    background:linear-gradient(transparent,#111b);
+    padding:42px 17px 16px;
+    color:white;
+    font-weight:700
+}
+.gallery-note {
+    font-size:.81rem;
+    color:var(--muted);
+    margin-top:14px
+}
+.contact-band {
+    background:var(--navy);
+    color:white;
+    padding:50px;
+    border-radius:24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px
+}
+.contact-band h2 {
+    font-size:clamp(1.7rem,3vw,2.6rem);
+    line-height:1.15;
+    margin:0 0 7px
+}
+.contact-band p {
+    margin:0;
+    color:#71797E
+}
+.contact-band .actions {
+    margin:0;
+    flex:none
+}
+.location-grid {
+    display:grid;
+    grid-template-columns:1fr 1.05fr;
+    gap:25px
+}
+.details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.detail {
+    padding:25px;
+    height: auto;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px
+}
+.detail b {
+    font-size:.8rem;
+    display:block;
+    color:var(--muted);
+    margin-bottom:5px
+}
+.detail span {
+    font-weight:700;
+    color:var(--navy)
+}
+.map {
+    min-height:310px;
+    border-radius:18px;
+    background:linear-gradient(130deg,#e2e7e5,#cdd9d7);
+    display:grid;
+    place-items:center;
+    text-align:center;
+    padding:25px;
+    color:var(--navy);
+    position:relative;
+    overflow:hidden
+}
+.map:before {
+    content:"";
+    position:absolute;
+    width:150%;
+    height:1px;
+    background:#fff;
+    transform:rotate(-28deg);
+    box-shadow:0 45px #ffffff9c,0 -48px #ffffff9c
+}
+.map-content {
+    position:relative;
+    background:#ffffffdf;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:var(--shadow)
+}
+.form-layout {
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    gap:35px
+}
+.contact-info { 
+    
+    background:var(--navy);
+    color:white;
+    border-radius:20px;
+    padding:28px
+}
+.contact-info h3 {
+    font-size:1.4rem;
+    margin:0 0 10px
+}
+.contact-info p {
+    color:#71797E
+}
+.contact-item {
+    padding:13px 0;
+    border-bottom:1px solid #ffffff20
+}
+.contact-item small {
+    display:block;
+    color:#71797E
+}
+.form {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px
+}
+.field {
+    display:flex;
+    flex-direction:column;
+    gap:6px
+}
+.field.full {
+    grid-column:1/-1
+}
+.field label {
+    font-size:.84rem;
+    font-weight:750;
+    color:var(--navy)
+}
+.field input,.field textarea {
+    border:1px solid #d8dcdf;
+    border-radius:10px;
+    padding:12px 13px;
+    outline:none;
+    background:#fff
+}
+.field input:focus,.field textarea:focus {
+    border-color:var(--orange);
+    box-shadow:0 0 0 3px #ef76281b
+}
+.field textarea {
+    min-height:120px;
+    resize:vertical
+}
+.form small {
+    color:var(--muted)
+}
+.footer {
+    background:#101d29;
+    color:#d5dde4;
+    padding:45px 0 20px
+}
+.footer-grid {
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr;
+    gap:30px
+}
+.footer .brand {
+    color:white
+}
+.footer p,.footer a {
+    color:#b9c4ce;
+    font-size:.88rem
+}
+.footer h4 {
+    color:#fff;
+    margin:0 0 12px
+}
+.footer-links {
+    display:grid;
+    gap:7px
+}
+.copyright {
+    border-top:1px solid #ffffff1c;
+    margin-top:30px;
+    padding-top:17px;
+    font-size:.78rem;
+    color:#9eabb6;
+    display:flex;
+    justify-content:space-between
+}
+.whatsapp {
+    position:fixed;
+    z-index:9;
+    bottom:20px;
+    right:20px;
+    border-radius:50px;
+    background:#1fae62;
+    color:white;
+    padding:13px 18px;
+    font-weight:850;
+    box-shadow:0 8px 25px #0003
+}
+.whatsapp span {
+    font-size:1.1rem;
+    margin-right:7px
+}
+@media(max-width:900px) {
+    .links {
+        gap:13px;
+        font-size:.82rem
+    }
+    .nav>.btn {
+        padding:11px 13px
+    }
+    .features {
+        grid-template-columns:repeat(2,1fr)
+    }
+    .services {
+        grid-template-columns:repeat(2,1fr)
+    }
+    .split {
+        gap:28px
+    }
+    .gallery {
+        grid-template-columns:1fr 1fr
+    }
+    .gallery figure:first-child {
+        grid-row:auto;
+        min-height:300px
+    }
+    .gallery figure {
+        min-height:230px
+    }
+    .contact-band {
+        padding:35px
+    }
+    .form-layout {
+        grid-template-columns:1fr 1.3fr
+    }
+}
+@media(max-width:700px) {
+    .wrap {
+        width:min(100% - 32px,560px)
+    }
+    .topbar .wrap {
+        justify-content:center
+    }
+    .topbar .wrap span:last-child {
+        display:none
+    }
+    .nav {
+        min-height:66px
+    }
+    .menu-toggle {
+        display:block
+    }
+    .nav>.btn {
+        display:none
+    }
+    .links {
+        display:none;
+        position:absolute;
+        top:66px;
+        left:0;
+        right:0;
+        background:white;
+        padding:14px 22px 22px;
+        box-shadow:0 12px 20px #14243518;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0
+    }
+    .links.open {
+        display:flex
+    }
+    .links a {
+        padding:11px 0;
+        border-bottom:1px solid var(--line)
+    }
+    .links .mobile-contact {
+        display:block;
+        background:var(--orange);
+        color:white;
+        text-align:center;
+        padding:12px;
+        border:0;
+        border-radius:10px;
+        margin-top:12px
+    }
+    .hero {
+        min-height:565px
+    }
+    .hero:before {
+        background:linear-gradient(90deg,#101f2deF 0%,#132639d9 65%,#13263977 100%),url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1100&q=80') center/cover
+    }
+    .hero-content {
+        padding:70px 0
+    }
+    .hero h1 {
+        font-size:3.2rem
+    }
+    .hero p {
+        font-size:1rem
+    }
+    .hero-note {
+        margin-top:35px
+    }
+    section {
+        padding:65px 0
+    }
+    .features {
+        gap:10px
+    }
+    .feature {
+        padding:17px 14px
+    }
+    .feature p {
+        font-size:.83rem
+    }
+    .split,.location-grid,.form-layout {
+        grid-template-columns:1fr
+    }
+    .photo {
+        min-height:330px;
+        order:2
+    }
+    .services {
+        grid-template-columns:1fr 1fr;
+        gap:10px
+    }
+    .card {
+        padding:18px;
+        min-height:205px
+    }
+    .card p {
+        font-size:.84rem
+    }
+    .difference {
+        grid-template-columns:1fr
+    }
+    .gallery {
+        gap:9px
+    }
+    .gallery figure:first-child {
+        grid-column:span 2;
+        min-height:260px
+    }
+    .gallery figure {
+        min-height:170px
+    }
+    .gallery img {
+        min-height:170px
+    }
+    .gallery figcaption {
+        font-size:.78rem;
+        padding:35px 12px 12px
+    }
+    .contact-band {
+        display:block;
+        padding:27px 22px
+    }
+    .contact-band .actions {
+        margin-top:18px
+    }
+    .details {
+        gap:9px
+    }
+    .detail {
+        padding:15px 12px
+    }
+    .detail span {
+        font-size:.86rem
+    }
+    .map {
+        min-height:270px
+    }
+    .form {
+        grid-template-columns:1fr
+    }
+    .field.full {
+        grid-column:auto
+    }
+    .footer-grid {
+        grid-template-columns:1fr 1fr
+    }
+    .footer-grid>div:first-child {
+        grid-column:1/-1
+    }
+    .copyright {
+        display:block
+    }
+    .whatsapp {
+        right:12px;
+        bottom:12px;
+        padding:12px 15px;
+        font-size:.88rem
+    }
+}
+@media(max-width:390px) {
+    .services {
+        grid-template-columns:1fr
+    }
+    .hero h1 {
+        font-size:2.8rem
+    }
+    .features {
+        grid-template-columns:1fr 1fr
+    }
+    .actions .btn {
+        width:100%
+    }
+    .footer-grid {
+        grid-template-columns:1fr
+    }
+    .footer-grid>div:first-child {
+        grid-column:auto
+    }
+}
+.whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+.whatsapp img {
+    width: 24px;
+    height: 24px;
+}
+.icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.nav > .btn {
+    margin-left: auto;
+    padding: 12px 16px;
+    font-size: 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+#contato .section-head {
+    margin-bottom: 5px;
+}
+
+#contato {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#contato .section-head {
+    margin-bottom: 0;
+}
+
+#contato .section-head {
+    margin-bottom: 15px;
+}
+
+#contato .form-layout {
+    margin-top: 0;
+}
+
+#contato .contact-info {
+    padding-top: 15px;
+}
+  </style>
+ </head>
+ <body>
+  <div class="topbar">
+   <div class="wrap">
+    <span>
+     Manutenção e conserto de caminhões
+    </span>
+    <span>
+     Atendimento: [DIAS E HORÁRIOS]
+    </span>
+   </div>
+  </div>
+  <header class="header">
+   <div class="wrap nav">
+    <a aria-label="Grupo Katsan - início" class="brand" href="#inicio">
+     <img alt="Logo Grupo Katsan" src="k.png" width="50"/>
+     <span>
+      GRUPO KATSAN
+      <small>
+       MANUTENÇÃO DE CAMINHÕES
+      </small>
+     </span>
+    </a>
+    <button aria-expanded="false" aria-label="Abrir menu" class="menu-toggle">
+     ☰
+    </button>
+    <nav aria-label="Navegação principal" class="links">
+     <a href="#inicio">
+      Início
+     </a>
+     <a href="#sobre">
+      Sobre nós
+     </a>
+     <a href="#servicos">
+      Serviços
+     </a>
+     <a href="#estrutura">
+      Estrutura
+     </a>
+     <a href="#localizacao">
+      Localização
+     </a>
+     <a href="#contato">
+      Contato
+     </a>
+     <a class="mobile-contact" href="#contato">
+      Fale com nossa equipe
+     </a>
+    </nav>
+    <a class="btn" href="#contato">
+     Fale com nossa equipe
+     <span>
+      ↗
+     </span>
+    </a>
+   </div>
+  </header>
+  <main>
+   <section class="hero" id="inicio">
+    <div class="wrap">
+     <div class="hero-content">
+      <div class="eyebrow">
+       Grupo Katsan · Cuidado com quem move o Brasil
+      </div>
+      <h1>
+       Seu caminhão
+       <br/>
+       em boas mãos.
+      </h1>
+      <p>
+       Qualidade, confiança e experiência para ajudar seu caminhão a seguir caminho. Conte com o Grupo Katsan para cuidar do que mantém seu trabalho em movimento.
+      </p>
+      <div class="actions">
+       <a class="btn" href="#contato">
+        Fale com nossa equipe
+        <span>
+         ↗
+        </span>
+       </a>
+       <a class="btn btn-outline" href="#localizacao">
+        Ver localização
+       </a>
+      </div>
+      <div class="hero-note">
+       Manutenção e conserto de caminhões com atenção em cada etapa.
+      </div>
+     </div>
+    </div>
+   </section>
+   <section>
+    <div class="wrap">
+     <div class="section-head">
+    <h2 style="font-size: 30px; color: #008000;">
+    Por que Grupo Katsan
+        </h2>
+      <h2>
+       Confiança para seguir em frente.
+      </h2>
+      <p>
+       Um atendimento próximo e cuidadoso para quem depende do caminhão todos os dias. Conheça os diferenciais que fazem parte do nosso compromisso.
+      </p>
+     </div>
+     <div class="features">
+      <article class="feature">
+       <div class="icon">
+        <img src="anos.png" alt="Anos">
+       </div>
+       <h3>
+        Experiência no setor
+       </h3>
+       <p>
+        [ANOS DE EXPERIÊNCIA] cuidando de caminhões e atendendo quem vive da estrada.
+       </p>
+      </article>
+      <article class="feature">
+       <div class="icon">
+        <img src="experiencia.png" alt="Experiência">
+       </div>
+       <h3>
+        Conhecimento técnico
+       </h3>
+       <p>
+        [DETALHES DA EXPERIÊNCIA E ESPECIALIZAÇÃO DA EQUIPE]
+       </p>
+      </article>
+      <article class="feature">
+       <div class="icon">
+        <img src="agilidade.png" alt="Agilidade">
+       </div>
+       <h3>
+        Atendimento atencioso
+       </h3>
+       <p>
+        [DETALHES SOBRE AGILIDADE E ATENDIMENTO AO CLIENTE]
+       </p>
+      </article>
+      <article class="feature">
+       <div class="icon">
+        <img src="ferramenta.png" alt="Ferramenta">
+       </div>
+       <h3>
+        Estrutura preparada
+       </h3>
+       <p>
+        [DETALHES SOBRE EQUIPAMENTOS E ESTRUTURA]
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="bg" id="sobre">
+    <div class="wrap split">
+     <div>
+      <div class="section-head">
+       <div class="eyebrow">
+        Sobre nós
+       </div>
+       <h2 style="color: #008000;">
+        Uma história feita de trabalho e confiança.
+       </h2>
+       <p class="editable">
+        O Grupo Katsan nasceu em
+        <span class="placeholder">
+         [ANO DE FUNDAÇÃO]
+        </span>
+        , em
+        <span class="placeholder">
+         Sinop - Mato Grosso
+        </span>
+        .
+        <span class="placeholder">
+         [CONTE AQUI COMO A EMPRESA COMEÇOU]
+        </span>
+       </p>
+       <p class="editable">
+        Com
+        <span class="placeholder">
+         [ANOS DE EXPERIÊNCIA]
+        </span>
+        de experiência no setor, seguimos comprometidos em oferecer cuidado, transparência e qualidade em cada atendimento.
+       </p>
+       <div class="mission">
+        <p>
+         <strong style="color:#084C61;">
+          Missão
+         </strong>
+         <br/>
+         <span class="placeholder">
+          [MISSÃO DA EMPRESA]
+         </span>
+        </p>
+        <p>
+         <strong style="color:#084C61;">
+          Valores
+         </strong>
+         <br/>
+         <span class="placeholder">
+          [VALORES DA EMPRESA]
+         </span>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div aria-label="Imagem temporária de caminhão em oficina" class="photo" role="img">
+      
+     </div>
+    </div>
+   </section>
+   <section id="servicos">
+    <div class="wrap">
+     <div class="section-head">
+      <h2 style="font-size: 30px; color: #008000;">
+    O que fazemos
+        </h2>
+      <h2>
+       Serviços para manter seu caminhão no caminho.
+      </h2>
+      <p>
+       Veja alguns serviços que podem ser apresentados nesta seção. Revise e confirme a oferta antes de publicar cada item.
+      </p>
+     </div>
+     <div class="services">
+      <article class="card">
+       <div class="icon">
+        ✳
+       </div>
+       <div class="tag">
+        Serviço
+       </div>
+       <h3>
+        Diagnóstico e manutenção
+       </h3>
+       <p>
+        Avaliação das necessidades do caminhão e manutenção conforme os serviços efetivamente oferecidos pela empresa.
+       </p>
+      </article>
+      <article class="card">
+       <div class="icon">
+        ✳
+       </div>
+       <div class="tag">
+        Serviço
+       </div>
+       <h3>
+        Conserto mecânico
+       </h3>
+       <p>
+        [DESCREVA OS TIPOS DE CONSERTO MECÂNICO REALIZADOS]
+       </p>
+      </article>
+      <article class="card">
+       <div class="icon">
+        ✳
+       </div>
+       <div class="tag">
+        Serviço
+       </div>
+       <h3>
+        Manutenção preventiva
+       </h3>
+       <p>
+        [DESCREVA OS SERVIÇOS PREVENTIVOS OFERECIDOS]
+       </p>
+      </article>
+      <article class="card">
+       <div class="icon">
+        ✳
+       </div>
+       <div class="tag">
+        Serviço
+       </div>
+       <h3>
+        Manutenção corretiva
+       </h3>
+       <p>
+        [DESCREVA OS SERVIÇOS CORRETIVOS OFERECIDOS]
+       </p>
+      </article>
+      <article class="card">
+       <div class="icon">
+        ✳
+       </div>
+       <div class="tag">
+        Para empresas
+       </div>
+       <h3>
+        Atendimento a frotas
+       </h3>
+       <p>
+        [INFORME SE A EMPRESA ATENDE FROTAS E COMO FUNCIONA]
+       </p>
+      </article>
+      <article class="card">
+       <div class="icon">
+        ✳
+       </div>
+       <div class="tag">
+        Outros serviços
+       </div>
+       <h3>
+        [OUTROS SERVIÇOS OFERECIDOS]
+       </h3>
+       <p>
+        [ADICIONE UMA DESCRIÇÃO CURTA DO SERVIÇO]
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="bg">
+    <div class="wrap">
+     <div class="section-head">
+      <div class="eyebrow">
+       Nossos diferenciais
+      </div>
+      <h2 style="color:#008000;">
+       O cuidado está nos detalhes.
+      </h2>
+      <p>
+       Complete estes campos com características reais do atendimento e da estrutura do Grupo Katsan.
+      </p>
+     </div>
+     <div class="difference">
+      <article class="diff">
+       <div class="icon">
+        <img src="experiencia.png" alt="Experiência">
+       </div>
+       <div>
+        <h3>
+         Equipe especializada
+        </h3>
+        <p>
+         [DETALHES SOBRE A EQUIPE E SUA EXPERIÊNCIA]
+        </p>
+       </div>
+      </article>
+      <article class="diff">
+       <div class="icon">
+        <img src="estrutura.png" alt="Estrutura">
+       </div>
+       <div>
+        <h3>
+         Equipamentos e estrutura
+        </h3>
+        <p>
+         [DETALHES SOBRE EQUIPAMENTOS E ESTRUTURA]
+        </p>
+       </div>
+      </article>
+      <article class="diff">
+       <div class="icon">
+        <img src="horarios.png" alt="Horarios">
+       </div>
+       <div>
+        <h3>
+         Agilidade no atendimento
+        </h3>
+        <p>
+         [DETALHES SOBRE PRAZOS, AGENDAMENTO OU ATENDIMENTO]
+        </p>
+       </div>
+      </article>
+      <article class="diff">
+       <div class="icon">
+        <img src="frota.png" alt="Frota">
+       </div>
+       <div>
+        <h3>
+         Empresas e frotas
+        </h3>
+        <p>
+         [DETALHES SOBRE ATENDIMENTO A EMPRESAS E FROTAS]
+        </p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section id="estrutura">
+    <div class="wrap">
+     <div class="section-head">
+      <h2 style="font-size: 30px; color: #008000;">
+       Estrutura e fotos
+      </div>
+      <h2>
+       Um espaço preparado para cuidar do seu caminhão.
+      </h2>
+      <p>
+       Substitua as imagens ilustrativas abaixo por fotos reais da oficina, equipe, equipamentos e veículos atendidos.
+      </p>
+     </div>
+     <div class="gallery">
+      <figure>
+       <img alt="Imagem temporária de oficina automotiva" loading="lazy" src="https://images.unsplash.com/photo-1586191582151-f73872dfd183?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"/>
+       <figcaption>
+        Oficina — substituir por foto real
+       </figcaption>
+      </figure>
+      <figure>
+       <img src="foto2.webp" alt="Caminhão"/>
+       <figcaption>
+        
+       </figcaption>
+      </figure>
+      <figure>
+       <img src="foto1.webp" alt="Caminhão"/>
+       <figcaption>
+        Veículos atendidos
+       </figcaption>
+      </figure>
+      <figure>
+       <img alt="Imagem temporária de trabalho técnico" loading="lazy" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&amp;fit=crop&amp;w=700&amp;q=80"/>
+       <figcaption>
+        Equipe e equipamentos — substituir
+       </figcaption>
+      </figure>
+      <figure>
+       <img alt="Imagem temporária de caminhão na estrada" loading="lazy" src="https://images.unsplash.com/photo-1501706362039-c6e13d31b8f6?auto=format&amp;fit=crop&amp;w=700&amp;q=80"/>
+       <figcaption>
+        Na estrada — imagem ilustrativa
+       </figcaption>
+      </figure>
+     </div>
+     <p class="gallery-note">
+      As imagens atuais são temporárias e ilustrativas. Troque-as por fotografias autorizadas do Grupo Katsan.
+     </p>
+    </div>
+   </section>
+   <section class="bg" id="localizacao">
+    <div class="wrap">
+     <div class="section-head">
+      <div class="eyebrow">
+       Localização e atendimento
+      </div>
+      <h2 style="color: #008000;">
+       Estamos prontos para receber você.
+      </h2>
+      <p>
+       Confira os dados de atendimento e entre em contato para confirmar disponibilidade.
+      </p>
+     </div>
+     <div class="location-grid">
+      <div class="details">
+       <div class="detail">
+    <b>Endereço</b>
+    <span>[ENDEREÇO COMPLETO]</span>
+</div>
+
+<div class="detail">
+    <b>Sinop - Mato Grosso</b>
+    <span>Sinop - Mato Grosso</span>
+</div>
+
+<div class="detail">
+    <b>Horário</b>
+    <span>[DIAS E HORÁRIOS]</span>
+</div>
+</div>
+
+<div class="map">
+       <div class="map-content">
+    <div class="icon" style="background: transparent; border: none; margin: 0 auto; width: 50px; height: 50px; justify-content: center; align-items: center;">
+        <img src="local-verde.png" alt="Verde"
+             style="width: 80px; height: 80px;">
+    </div>
+        <h3 style="color: #008000;">
+         Encontre o Grupo Katsan
+        </h3>
+        <p style="color: #008000;">
+         [INSIRA AQUI O MAPA OU LINK DO GOOGLE MAPS]
+        </p>
+        <a class="btn btn-dark" href="[LINK DO GOOGLE MAPS]" rel="noopener" style="background-color: #008000;" target="_blank">
+         Como chegar ↗
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="contato">
+    <div class="wrap">
+     <div class="section-head">
+      <h2 style="font-size: 30px; color: #008000;">
+    Contato
+    </h2>
+       Como podemos ajudar?
+      </h2>
+      <p>
+       Conte um pouco sobre o que você precisa. Nossa equipe poderá retornar pelo telefone ou WhatsApp informado.
+      </p>
+     </div>
+     <div class="form-layout">
+      <aside class="contact-info">
+       <h3>
+        Fale com a equipe
+       </h3>
+       <p>
+        Entre em contato para consultar serviços e combinar o atendimento.
+       </p>
+       <div class="contact-item">
+        <small>
+         Telefone
+        </small>
+        <strong>
+         [TELEFONE]
+        </strong>
+       </div>
+       <div class="contact-item">
+        <small>
+         WhatsApp
+        </small>
+        <strong>
+         [NÚMERO COM DDD]
+        </strong>
+       </div>
+       <div class="contact-item">
+        <small>
+         E-mail
+        </small>
+        <strong>
+         [E-MAIL]
+        </strong>
+       </div>
+       <div class="actions">
+        <a class="btn" href="tel:[TELEFONE]">
+         Ligar agora
+        </a>
+        
+       </div>
+      </aside>
+      
+      <form class="form" id="contactForm">
+       <div class="field">
+        <label for="nome">
+         Nome
+        </label>
+        <input autocomplete="name" id="nome" name="nome" placeholder="Seu nome" required=""/>
+       </div>
+       <div class="field">
+        <label for="telefone">
+         Telefone ou WhatsApp
+        </label>
+        <input autocomplete="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required=""/>
+       </div>
+       <div class="field">
+        <label for="empresa">
+         Nome da empresa (opcional)
+        </label>
+        <input id="empresa" name="empresa" placeholder="Sua empresa"/>
+       </div>
+       <div class="field">
+        <label for="caminhao">
+         Modelo do caminhão (opcional)
+        </label>
+        <input id="caminhao" name="caminhao" placeholder="Modelo do caminhão"/>
+       </div>
+       <div class="field full">
+        <label for="mensagem">
+         Como podemos ajudar?
+        </label>
+        <textarea id="mensagem" name="mensagem" placeholder="Descreva brevemente o que você precisa" required=""></textarea>
+       </div>
+       <div class="field full">
+        <button class="btn" type="submit">
+         Enviar mensagem ↗
+        </button>
+        <small>
+         
+       </div>
+      </form>
+     </div>
+    </div>
+   </section>
+   
+   
+  </main>
+  <footer class="footer">
+   <div class="wrap">
+    <div class="footer-grid">
+     <div>
+      <a class="brand" href="#inicio">
+       <img alt="Logo Grupo Katsan" src="logo.png" width="150"/>
+       <span>
+        <small>
+         MANUTENÇÃO DE CAMINHÕES
+        </small>
+       </span>
+      </a>
+      <p>
+       Cuidado e manutenção para quem mantém o Brasil em movimento.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Navegação
+      </h4>
+      <div class="footer-links">
+       <a href="#sobre">
+        Sobre nós
+       </a>
+       <a href="#servicos">
+        Serviços
+       </a>
+       <a href="#estrutura">
+        Estrutura
+       </a>
+       <a href="#localizacao">
+        Localização
+       </a>
+       <a href="#contato">
+        Contato
+       </a>
+      </div>
+     </div>
+     <div>
+      <h4>
+       Contato e redes sociais
+      </h4>
+      <p>
+       [TELEFONE]
+       <br/>
+       [E-MAIL]
+       <br/>
+       [ENDEREÇO COMPLETO]
+      </p>
+      <div class="footer-links">
+       <a href="[LINK INSTAGRAM]">
+        Instagram
+       </a>
+       <a href="[LINK FACEBOOK]">
+        Facebook
+       </a>
+       <a href="[LINK LINKEDIN]">
+        LinkedIn
+       </a>
+      </div>
+     </div>
+    </div>
+    <div class="copyright">
+     <span>
+      ©
+      <span id="year">
+      </span>
+      Grupo Katsan. Todos os direitos reservados.
+     </span>
+     <span>
+      Site Grupo Katsan · Sinop - Mato Grosso
+     </span>
+    </div>
+   </div>
+  </footer>
+  <a aria-label="Fale com o Grupo Katsan pelo WhatsApp" class="whatsapp" href="https://wa.me/[NUMERO_COM_DDD]?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20do%20Grupo%20Katsan." rel="noopener" target="_blank">
+   <img alt="WhatsApp" src="icone_whatsapp.png" width="20"/>
+   WhatsApp
+  </a>
+  <script>
+   const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.links');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open);toggle.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget);const text=`Olá! Gostaria de falar com o Grupo Katsan.%0A%0ANome: ${encodeURIComponent(f.get('nome'))}%0ATelefone: ${encodeURIComponent(f.get('telefone'))}%0AEmpresa: ${encodeURIComponent(f.get('empresa')||'Não informado')}%0ACaminhão: ${encodeURIComponent(f.get('caminhao')||'Não informado')}%0AComo podemos ajudar: ${encodeURIComponent(f.get('mensagem'))}`;window.open(`https://wa.me/[NUMERO_COM_DDD]?text=${text}`,'_blank','noopener')});
+  </script>
+ </body>
+</html>
